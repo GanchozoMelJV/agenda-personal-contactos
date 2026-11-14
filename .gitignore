@@ -1,0 +1,10 @@
+
+# Archivos de configuración local
+/config/conexion.php
+
+# Archivos temporales de Windows
+Thumbs.db
+desktop.ini
+
+# Archivos temporales de macOS
+.DS_Store

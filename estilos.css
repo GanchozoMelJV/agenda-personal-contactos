@@ -1,0 +1,764 @@
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+    padding: 35px 20px;
+}
+
+/* TITULOS */
+
+h1 {
+    color: #493b75;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    color: #594987;
+    margin: 25px 0 15px;
+}
+
+p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* FORMULARIOS */
+
+form {
+    background-color: white;
+    max-width: 480px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #493b75;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d5df;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8067bd;
+}
+
+/* BOTONES */
+
+button {
+    background-color: #7155a5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #503a7c;
+}
+
+/* ENLACES */
+
+a {
+    color: #7155a5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* TABLAS */
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #7155a5;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f3effa;
+}
+
+/* PANEL PRINCIPAL */
+
+body > h1,
+body > h2,
+body > p {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+}
+
+/* MEJORAS DEL PANEL PRINCIPAL */
+
+body > h1,
+body > h2,
+body > p {
+    text-align: center;
+}
+
+body > a {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+}
+
+body > table {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* BOTONES Y ACCIONES DE LA TABLA */
+
+td a {
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+td a:hover {
+    color: #493b75;
+}
+
+/* =================================
+   DISEÑO DEL PANEL PRINCIPAL
+================================= */
+
+.pagina-panel {
+    background: linear-gradient(135deg, #eee9fa, #f7f5fc);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.contenedor-panel {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(75, 55, 120, 0.12);
+}
+
+/* ENCABEZADO */
+
+.encabezado-panel {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eeeaf5;
+}
+
+.encabezado-panel h1 {
+    color: #594487;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.encabezado-panel p {
+    color: #777;
+}
+
+/* TARJETA DEL USUARIO */
+
+.tarjeta-usuario {
+    background-color: #f5f1fc;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid #8065b5;
+}
+
+.tarjeta-usuario h2 {
+    margin: 0 0 12px;
+    color: #594487;
+}
+
+.tarjeta-usuario p {
+    margin: 0;
+    color: #555;
+}
+
+/* SECCION DE CONTACTOS */
+
+.seccion-contactos {
+    margin-top: 30px;
+}
+
+.encabezado-contactos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.encabezado-contactos h2 {
+    margin: 0;
+    color: #594487;
+}
+
+/* BOTON AGREGAR */
+
+.boton-agregar {
+    display: inline-block;
+    background-color: #7155a5;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton-agregar:hover {
+    background-color: #503a7c;
+    color: white;
+    text-decoration: none;
+}
+
+/* TABLA DE CONTACTOS */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #eeeaf5;
+}
+
+.tabla-contactos {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.tabla-contactos th {
+    background-color: #7155a5;
+    color: white;
+    padding: 16px 12px;
+}
+
+.tabla-contactos td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #eeeaf5;
+    text-align: center;
+}
+
+.tabla-contactos tr:hover {
+    background-color: #f8f5fd;
+}
+
+/* ACCIONES */
+
+.acciones a {
+    display: inline-block;
+    margin: 3px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-editar {
+    background-color: #eee8fa;
+    color: #654a9b;
+}
+
+.enlace-eliminar {
+    background-color: #fdeaea;
+    color: #c04444;
+}
+
+/* MENSAJE CUANDO NO HAY CONTACTOS */
+
+.mensaje-vacio {
+    text-align: center;
+    background-color: #f8f6fc;
+    border: 1px dashed #c8b9e2;
+    border-radius: 12px;
+    padding: 35px 15px;
+    margin: 20px 0;
+}
+
+.mensaje-vacio h3 {
+    color: #594487;
+    margin-bottom: 12px;
+}
+
+.mensaje-vacio p {
+    color: #777;
+}
+
+/* PIE DEL PANEL */
+
+.pie-panel {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeaf5;
+}
+
+.boton-cerrar {
+    display: inline-block;
+    color: #7155a5;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #7155a5;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.boton-cerrar:hover {
+    background-color: #7155a5;
+    color: white;
+    text-decoration: none;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+
+    .pagina-panel {
+        padding: 15px 8px;
+    }
+
+    .contenedor-panel {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+
+    .encabezado-panel h1 {
+        font-size: 24px;
+    }
+
+    .encabezado-contactos {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .boton-agregar {
+        text-align: center;
+    }
+}
+
+/* =================================
+   DISEÑO DE ELIMINAR CONTACTO
+================================= */
+
+.contenedor-eliminar {
+    max-width: 550px;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(75, 55, 120, 0.12);
+    text-align: center;
+}
+
+.contenedor-eliminar h1 {
+    color: #594487;
+    margin-bottom: 20px;
+}
+
+.contenedor-eliminar p {
+    color: #666;
+}
+
+.nombre-eliminar {
+    background-color: #f5f1fc;
+    color: #594487;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.advertencia-eliminar {
+    color: #c04444 !important;
+    font-weight: bold;
+}
+
+.botones-eliminar {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.botones-eliminar button {
+    background-color: #c04444;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botones-eliminar button:hover {
+    background-color: #9f3030;
+}
+
+.volver-eliminar {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.volver-eliminar a {
+    color: #7155a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.volver-eliminar a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contenedor-eliminar {
+        margin: 25px 12px;
+        padding: 25px 15px;
+    }
+}
+
+/* =================================
+   DISEÑO DE EDITAR CONTACTO
+================================= */
+
+.contenedor-editar {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(75, 55, 120, 0.12);
+}
+
+.contenedor-editar h1 {
+    text-align: center;
+    color: #594487;
+    margin-bottom: 12px;
+}
+
+.descripcion-editar {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.contenedor-editar form {
+    text-align: left;
+}
+
+.contenedor-editar label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #594487;
+}
+
+.contenedor-editar input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    margin-bottom: 18px;
+    border: 1px solid #d8cfea;
+    border-radius: 7px;
+}
+
+.contenedor-editar input:focus {
+    outline: none;
+    border-color: #8065b5;
+}
+
+.botones-editar {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.botones-editar button {
+    background-color: #7155a5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botones-editar button:hover {
+    background-color: #503a7c;
+}
+
+.volver-editar {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.volver-editar a {
+    color: #7155a5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.volver-editar a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-error-editar {
+    color: #c04444;
+    background-color: #fdeaea;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor-editar {
+        margin: 20px 12px;
+        padding: 25px 18px;
+    }
+}
+
+/* =================================
+   DISEÑO DE REGISTRO
+================================= */
+
+.contenedor-registro {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(75, 55, 120, 0.12);
+}
+
+.contenedor-registro h1 {
+    text-align: center;
+    color: #594487;
+}
+
+.descripcion-registro {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.contenedor-registro label {
+    display: block;
+    margin-bottom: 7px;
+    color: #594487;
+    font-weight: bold;
+}
+
+.contenedor-registro input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    margin-bottom: 18px;
+    border: 1px solid #d8cfea;
+    border-radius: 7px;
+}
+
+.boton-registro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.boton-registro button {
+    background-color: #7155a5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-registro button:hover {
+    background-color: #503a7c;
+}
+
+.mensaje-exito-registro {
+    background-color: #e4f5e9;
+    color: #267342;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.mensaje-error-registro {
+    background-color: #fdeaea;
+    color: #c04444;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor-registro {
+        margin: 20px 12px;
+        padding: 25px 18px;
+    }
+}
+
+/* =================================
+   DISEÑO DE REGISTRO
+================================= */
+
+.contenedor-registro {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(75, 55, 120, 0.12);
+}
+
+.contenedor-registro h1 {
+    text-align: center;
+    color: #594487;
+}
+
+.descripcion-registro {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.contenedor-registro label {
+    display: block;
+    margin-bottom: 7px;
+    color: #594487;
+    font-weight: bold;
+}
+
+.contenedor-registro input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    margin-bottom: 18px;
+    border: 1px solid #d8cfea;
+    border-radius: 7px;
+}
+
+.boton-registro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.boton-registro button {
+    background-color: #7155a5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-registro button:hover {
+    background-color: #503a7c;
+}
+
+.mensaje-exito-registro {
+    background-color: #e4f5e9;
+    color: #267342;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.mensaje-error-registro {
+    background-color: #fdeaea;
+    color: #c04444;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+/* Enlace para regresar al inicio de sesión */
+
+.enlace-login {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.enlace-login a {
+    color: #7155a5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace-login a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contenedor-registro {
+        margin: 20px 12px;
+        padding: 25px 18px;
+    }
+}
